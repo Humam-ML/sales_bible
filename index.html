@@ -55,7 +55,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 
 const SUPABASE_URL = 'https://dbdbmbtveftcxcnmqobs.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_6dyU6Fhprno1_pUZRdVqKQ_yXEbFNma';
-const APP_PAGE     = 'bible.html';   // <-- the file this redirects to
+const APP_PAGE     = 'Higen_Sales_Bible_App_V0.24.html'; // Or 'bible.html' if you rename the app file
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
@@ -67,7 +67,7 @@ const msg       = document.getElementById('msg');
 
 const setMsg = (t) => { msg.textContent = t || ''; msg.className = 'msg' + (t ? ' err' : ''); };
 
-// Already signed in in this tab → skip straight through
+// Already signed in in this tab -> skip straight through
 if (sessionStorage.getItem('sb_user')) location.replace(APP_PAGE);
 
 form.addEventListener('submit', async (e) => {
